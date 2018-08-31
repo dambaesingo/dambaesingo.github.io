@@ -157,7 +157,7 @@ function updateRegionCode(result, status) {
 }
 
 function updatePin() {
-  axios.get('http://dambaesingo-api.j911.me/api/v1/info/' + regionCode)
+  axios.get('https://dambaesingo-api.j911.me/api/v1/info/' + regionCode)
     .then(function (response) {
       var info = response.data.info;
       info.forEach(i => {
@@ -175,7 +175,7 @@ function updatePin() {
 function registInfo() {
   hideRegist();
   showModal('등록중입니다.');
-  axios.post('http://dambaesingo-api.j911.me/api/v1/info/', {
+  axios.post('https://dambaesingo-api.j911.me/api/v1/info/', {
     lat: registPos.lat,
     lng: registPos.lng,
     code: regionCode,
